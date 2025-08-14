@@ -17,6 +17,7 @@ Minimal Python 3.11 tool that extracts references (to other circulars, regulatio
 python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+mkdir -p runs/dev # since the runs folder is in .gitignore
 ```
 
 Environment variables (optional for Gemini fallback):
