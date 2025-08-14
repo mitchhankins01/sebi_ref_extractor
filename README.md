@@ -47,14 +47,15 @@ sebi_ref_extractor/
 
 ### Usage (single PDF)
 ```bash
+
+# show version
+python extract_references.py --version
+
 # default (all refs) + markdown report (write to runs/dev)
 python extract_references.py --pdf "./samples/1. Recent, citation-dense Master Circular (2024–2025).pdf" --out runs/dev/master_recent_2024_2025.json --csv runs/dev/master_recent_2024_2025.csv --summary --md runs/dev/master_recent_2024_2025.md
 
 # external-only (filters out Annexure/Chapter/etc.) + markdown
 python extract_references.py --pdf "./samples/1. Recent, citation-dense Master Circular (2024–2025).pdf" --out runs/dev/master_recent_2024_2025.external.json --csv runs/dev/master_recent_2024_2025.external.csv --external-only --summary --md runs/dev/master_recent_2024_2025.external.md
-
-# show version
-python extract_references.py --version
 
 # try to resolve cited circular titles from nearby text only (no web requests)
 python extract_references.py --pdf "./samples/1. Recent, citation-dense Master Circular (2024–2025).pdf" \
